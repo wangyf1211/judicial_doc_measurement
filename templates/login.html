@@ -45,6 +45,35 @@
             text-align: center;
 
         }
+
+        .login-btn {
+            width: 60%;
+        }
+
+        .tip {
+            text-align: right;
+            margin-top: 20px;
+            position: relative;
+            left: 50px;
+        }
+
+        .tip a {
+            background: #009687;
+            padding: 6px;
+            color: #fff;
+        }
+
+        .tip::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 14.5px solid transparent;
+            border-bottom: 14.5px solid transparent;
+            border-left: 15px solid #009687;
+            z-index: 999;
+            position: absolute;
+            top: -4px;
+        }
     </style>
 </head>
 <body>
@@ -83,9 +112,9 @@
                 </div>
                 <div class="layui-form-item">
                     <div class="layui-input-block btn-group">
-                        <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
-                        <button class="layui-btn layui-btn-primary">注册</button>
+                        <button class="layui-btn layui-btn-fluid login-btn" lay-submit lay-filter="formDemo">登录</button>
                     </div>
+                    <div class="tip">没有账号？<a href="regist.html">注销</a></div>
                 </div>
             </form>
         </div>

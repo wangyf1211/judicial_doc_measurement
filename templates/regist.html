@@ -45,6 +45,41 @@
             text-align: center;
 
         }
+
+        /**
+                .tip {
+                    text-align: center;
+                }
+
+                .tip a {
+                    text-decoration: underline;
+                    color: #009687;
+                }
+                */
+        .tip {
+            text-align: right;
+            margin-top: 20px;
+            position: relative;
+            left: 50px;
+        }
+
+        .tip a {
+            background: #009687;
+            padding: 6px;
+            color: #fff;
+        }
+
+        .tip::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 14.5px solid transparent;
+            border-bottom: 14.5px solid transparent;
+            border-left: 15px solid #009687;
+            z-index: 999;
+            position: absolute;
+            top: -4px;
+        }
     </style>
 </head>
 <body>
@@ -112,6 +147,8 @@
                         <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                     </div>
                 </div>
+                <div class="tip">
+                    <span>已有账号？去</span><a href="login.html">登录</a></div>
             </form>
         </div>
     </div>
